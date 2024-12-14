@@ -1,0 +1,10 @@
+name: funcs
+on: push
+jobs:
+    print:
+        runs-on: ubuntu-latest
+        steps:
+            - run: printenv | grep 'FUNC_'
+        env:
+            FUNC_contains: ${{ contains('Hello', "ell") }}
+            FUNC_gen: ${{ join(github.event.*.html, ', ')}}

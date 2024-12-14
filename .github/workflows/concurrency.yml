@@ -1,4 +1,4 @@
-name: Concurrency
+name: Concurrencya
 on: push
 concurrency: ${{ github.workflow }}
 jobs:
